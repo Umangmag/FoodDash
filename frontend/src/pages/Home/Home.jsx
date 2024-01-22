@@ -1,18 +1,21 @@
-import React, { useState } from 'react'
-import './Home.css'
-import Header from '../../components/Header/Header'
-import ExploreMenu from '../../components/ExporeMenu/ExploreMenu'
+import React from 'react'
+import Navbar from './components/Navbar/Navbar'
+import { Route,Routes } from 'react-router-dom'
+import Home from './pages/Home/Home'
+import Cart from './pages/Cart/Cart'
+import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
 
-const Home = () => {
-
-  const[category,setCategory]=useState("All");
-
+const App = () => {
   return (
-    <div>
-      <Header/>
-      <ExploreMenu category={category} setCategory={setCategory}/>
+    <div className='app'>
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/cart' element={<Cart/>}/>
+        <Route path='/order' element={<PlaceOrder/>}/>
+      </Routes>
     </div>
   )
 }
 
-export default Home
+export default App
