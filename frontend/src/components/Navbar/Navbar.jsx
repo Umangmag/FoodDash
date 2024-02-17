@@ -31,6 +31,7 @@ const Navbar = ({setShowLogin}) => {
             <li><img src={assets.bag_icon} alt="" /><p>Orders</p></li>
             <hr /> 
             <li><img src={assets.logout_icon} alt="" /><p>Logout</p></li>
+            
           </ul>
         </div> }
         
